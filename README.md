@@ -1,2 +1,4 @@
-hola
-# informatica-2bach-c
+# Informatica 2BachC
+
+Nuestro proyecto para la asignatura de TIC
+
