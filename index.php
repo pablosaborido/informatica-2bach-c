@@ -71,7 +71,11 @@ $app->container->singleton('db', function () {
 	
 $app->get('/', function() use ($app){
     global $twig;
-    echo $twig->render('inicio.php');  
+        $pdo=$app->db;
+    $r = $pdo->query("select * from contacto")->fetchAll(PDO::FETCH_ASSOC);
+		
+	$valores=array('datos'=>$r);
+    echo $twig->render('inicio.php', $valores);  
 }); 
 
 $app->group('/usuario', function() use ($app){

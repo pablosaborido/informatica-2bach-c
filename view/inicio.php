@@ -13,8 +13,14 @@
 {% endif %}
 
 <div class="jumbotron">
-	<h1>Dictados para Primaria y Secundaria</h1>
-	<p class="lead">Diviértete al tiempo que mejoras tu ortografía</p>
+	<h1>PANEL DE CONTROL</h1>
+	<p class="lead">REGISTRO DE PARTES</p>
+	{%for d in datos %}
+		{% for clave,valor in d %}
+			{{ clave }}: {{ valor }} <br>
+		{% endfor %}
+		------------------------<br>
+	{% endfor %}
 </div>
 {% endblock cuerpo %}
 

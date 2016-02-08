@@ -17,12 +17,11 @@
 				<ul class="nav nav-pills pull-right">
 				    <li id="inicio" class="active"><a href="/">Inicio</a></li>
 				    <li id="crear"><a href="/dictado/crear">Crear</a></li>
-					<li id="oir"><a href="/dictado/escuchar">Escuchar</a></li>
 					{% if login.isLogged() %}
 						<li id="salir"><a href="/usuario/logout">Cerrar sesión</a></li>
 					{% endif %}
 				</ul>
-				<h3 class="text-muted">AlDictado</h3>
+				<h3 class="text-muted">PARTES</h3>
 			</div>
 			
 			{% block cuerpo %} {% endblock %}
