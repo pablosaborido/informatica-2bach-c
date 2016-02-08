@@ -138,7 +138,7 @@ $app->group('/dictado', function() use ($app){
 	
 	// IDEA añadir reproductor para escuchar cómo queda el dictado que se está introduciendo
 	
-	$app->get('/crear', 'Login::forzarLogin', function() use ($app){
+	$app->get('/crear', function() use ($app){
 		global $twig;
 		echo $twig->render('dictadoCrear.php');
 	}); 
