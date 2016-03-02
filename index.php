@@ -71,16 +71,18 @@ $app->container->singleton('db', function () {
 	
 $app->get('/', function() use ($app){
     global $twig;
-    echo $twig->render('inicio.php');  
+	$pdo=$app->db;
+    $r = $pdo->query("select * from contacto")->fetchAll(PDO::FETCH_ASSOC);
+		
+	$valores=array('datos'=>$r);
+    echo $twig->render('inicio.php', $valores);  
 }); 
-$app->get('/', function() use ($app){
-    global $twig;
-    echo $twig->render('inicio.php');  
-}); 
+
 $app->get('/maria', function() use ($app){
     global $twig;
     echo $twig->render('contacto.php');  
 }); 
+
 $app->group('/usuario', function() use ($app){
 	
 	// Acción asociada al formulario de login
@@ -146,11 +148,13 @@ $app->group('/dictado', function() use ($app){
 		echo $twig->render('dictadoCrear.php');
 	}); 
 	
+
 	$app->post('/guardar', function() use ($app){
 		global $twig;
 		
 		$valores=array('nombre'=>$app->request()->post('dictado'));
 		echo $twig->render('miSaludo.php',$valores);
+
 	});
 	
 	// IDEA no usar el ID directamente en la url para evitar nos "frían" a peticiones
