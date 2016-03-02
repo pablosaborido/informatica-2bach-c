@@ -13,8 +13,8 @@
 {% endif %}
 
 <div class="jumbotron">
-	<h1>Control de partes</h1>
-	<p class="hola">'La más excelente de todas las virtudes es la justicia'. Aristóteles</p>
+<p class="lead">maria.
+</p>
 </div>
 {% endblock cuerpo %}
 
