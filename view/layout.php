@@ -22,7 +22,8 @@
 						<li id="salir"><a href="/usuario/logout">Cerrar sesión</a></li>
 					{% endif %}
 				</ul>
-				<h3 class="text-muted">CONTROL DE PARTES</h3>
+				
+				<img src="img/icono.jpg">
 			</div>
 			
 			{% block cuerpo %} {% endblock %}
