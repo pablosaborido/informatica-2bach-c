@@ -5,7 +5,7 @@
 {% block cuerpo %}
 
 <h1></h1>
-	<form novalidate="true" class="jotform-form" action="https://submit.jotformeu.com/submit/60212753776356/" method="post" name="form_60212753776356" id="60212753776356" accept-charset="utf-8">
+	<form novalidate="true" class="jotform-form" action="/guardarParte" method="post" name="form_60212753776356" id="60212753776356" accept-charset="utf-8">
   <input name="formID" value="60212753776356" type="hidden">
   <div class="form-all">
     <ul class="form-section page-section">
@@ -30,33 +30,36 @@
       <li class="form-line" data-type="control_textbox" id="id_4">
         <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4"> Alumno/a implicado: </label>
         <div id="cid_4" class="form-input jf-required">
-          <input class=" form-textbox" data-type="input-textbox" id="input_4" name="q4_alumnoaImplicado4" size="20" value="" type="text">
+          <input class=" form-textbox" data-type="input-textbox" id="input_4" name="alumnoaImplicado" size="20" value="" type="text">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_5">
         <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5"> Curso y Grupo: </label>
         <div id="cid_5" class="form-input jf-required">
-          <input class=" form-textbox" data-type="input-textbox" id="input_5" name="q5_cursoY5" size="20" value="" type="text">
+          <input class=" form-textbox" data-type="input-textbox" id="input_5" name="cursoygrupo" size="20" value="" type="text">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_6">
         <label class="form-label form-label-left form-label-auto" id="label_6" for="input_6"> Fecha: </label>
         <div id="cid_6" class="form-input jf-required">
-          <input class=" form-textbox" data-type="input-textbox" id="input_6" name="q6_fecha6" size="20" value="" type="text">
+          <input class=" form-textbox" data-type="input-textbox" id="input_6" name="fecha6" size="20" value="" type="text">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_7">
         <label class="form-label form-label-left form-label-auto" id="label_7" for="input_7"> Hora: </label>
         <div id="cid_7" class="form-input jf-required">
-          <input class=" form-textbox" data-type="input-textbox" id="input_7" name="q7_hora" size="20" value="" type="text">
+          <input class=" form-textbox" data-type="input-textbox" id="input_7" name="hora" size="20" value="" type="text">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_8">
         <label class="form-label form-label-left form-label-auto" id="label_8" for="input_8"> Asignatura: </label>
         <div id="cid_8" class="form-input jf-required">
-          <input class=" form-textbox" data-type="input-textbox" id="input_8" name="q8_asignatura" size="20" value="" type="text">
+          <input class=" form-textbox" data-type="input-textbox" id="input_8" name="asignatura" size="20" value="" type="text">
         </div>
       </li>
+      
+      <!--
+      
       <li class="form-line" data-type="control_textbox" id="id_9">
         <label class="form-label form-label-left form-label-auto" id="label_9" for="input_9"> Profesor/a: </label>
         <div id="cid_9" class="form-input jf-required">
@@ -251,9 +254,13 @@
       </li>
     </ul>
   </div>
+  -->
   <input id="simple_spc" name="simple_spc" value="60212753776356-60212753776356" type="hidden">
   <script type="text/javascript">
   document.getElementById("si" + "mple" + "_spc").value = "60212753776356-60212753776356";
   </script>
-<input value="true" name="preview" type="hidden"><input value="1453467120107_60212753776356_4HerYND" name="event_id" type="hidden"></form>
+<input value="true" name="preview" type="hidden"><input value="1453467120107_60212753776356_4HerYND" name="event_id" type="hidden">
+<button type="submit" class="btn btn-default">Enviar</button>
+
+</form>
 {% endblock cuerpo %}

@@ -45,7 +45,6 @@ header('Content-type: text/html; charset=utf-8');
 
 require 	 'vendor/autoload.php';
 
-require_once 'controller/Dictado.php';
 require_once 'controller/Email.php';
 require_once 'controller/Login.php';
 require_once 'controller/Utils.php';
@@ -84,17 +83,36 @@ $app->get('/maria', function() use ($app){
     echo $twig->render('contacto.php');  
 }); 
 
+$app->post('/guardarParte', function() use ($app){
+		global $twig;
+     
+    // Recogemos datos formulario de contacto
+    
+     $valores=array(
+ 		'alumnoaImplicado'=>$app->request()->post('alumnoaImplicado'),
+ 		'cursoygrupo'=>$app->request()->post('cursoygrupo'),
+ 		'fecha'=>$app->request()->post('fecha'),
+ 		'hora'=>$app->request()->post('hora'),
+		'asignatura'=>$app->request()->post('asignatura')
+		);
+		
+			// Guardamos en la BD
+	
+    $sql = "INSERT INTO contacto (alumnoaImplicado, cursoygrupo, fecha,hora,asignatura) VALUES (:alumnoaImplicado, :cursoygrupo, :fecha,:hora,:asignatura)";
+    $pdo=$app->db;
+	$q = $pdo->prepare($sql);
+	$q->execute($valores);
+	
+	// Mostramos un mensaje al usuario
+ 	
+     echo $app->redirect('/');  
+ }); 
+	
 $app->group('/usuario', function() use ($app){
 	
 	// Acción asociada al formulario de login
 	
-	$app->post('/autorizar', function() use ($app){
-		global $twig;
-		$user=$app->request->post('email');
-		// IDEA comprobar que el correo es correcto y no nos la intentan "colar" (PHP tiene métodos 'sanitize')
-		Email::enviar($user, 'Solicitud de acceso',Email::getMessageAutenticacion($user,Login::generarTokenAutenticacion($app->db,$user)));
-		echo $twig->render('usuarioLogin.php', array('email'=>$user));
-	});
+	
 	
 	$app->get('/login','Login::forzarLogin',function() use ($app){
 	});
