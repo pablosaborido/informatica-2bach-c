@@ -67,15 +67,20 @@ $twig->addGlobal('login', new Login()); // Para poder consultar si existe sesió
 $app->container->singleton('db', function () {
     return new \PDO('sqlite:model/dictados.db');
 });
-	
+
+$app->get('/inicio',function() use ($app){
+		global $twig;
+		echo $twig->render('inicio.php');  
+	});
+		
 $app->get('/', function() use ($app){
     global $twig;
-	/*$pdo=$app->db;
+	$pdo=$app->db;
     $r = $pdo->query("select * from contacto")->fetchAll(PDO::FETCH_ASSOC);
 		
-	$valores=array('datos'=>$r);
-    echo $twig->render('inicio.php', $valores);  */
-    echo $twig->render('inicio.php');
+	$valores=array('comentarios'=>$r);
+    echo $twig->render('inicio.php', $valores);  
+
 }); 
 
 $app->get('/maria', function() use ($app){
@@ -91,7 +96,7 @@ $app->post('/guardarParte', function() use ($app){
      $valores=array(
  		'alumnoaImplicado'=>$app->request()->post('alumnoaImplicado'),
  		'cursoygrupo'=>$app->request()->post('cursoygrupo'),
- 		'fecha'=>$app->request()->post('fecha'),
+ 		'fecha'=>$app->request()->post('fecha6'),
  		'hora'=>$app->request()->post('hora'),
 		'asignatura'=>$app->request()->post('asignatura')
 		);

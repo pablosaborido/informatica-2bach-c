@@ -30,31 +30,31 @@
       <li class="form-line" data-type="control_textbox" id="id_4">
         <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4"> Alumno/a implicado: </label>
         <div id="cid_4" class="form-input jf-required">
-          <input class=" form-textbox" data-type="input-textbox" id="input_4" name="alumnoaImplicado" size="20" value="" type="text">
+          <input class=" form-textbox" data-type="input-textbox" id="input_4" name="alumnoaImplicado" size="20" value="{{comentario.ALUMNOIMPLICADO}}" type="text">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_5">
         <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5"> Curso y Grupo: </label>
         <div id="cid_5" class="form-input jf-required">
-          <input class=" form-textbox" data-type="input-textbox" id="input_5" name="cursoygrupo" size="20" value="" type="text">
+          <input class=" form-textbox" data-type="input-textbox" id="input_5" name="cursoygrupo" size="20" value="{{comentario.CURSOYGRUPO}}" type="text">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_6">
         <label class="form-label form-label-left form-label-auto" id="label_6" for="input_6"> Fecha: </label>
         <div id="cid_6" class="form-input jf-required">
-          <input class=" form-textbox" data-type="input-textbox" id="input_6" name="fecha6" size="20" value="" type="text">
+          <input class=" form-textbox" data-type="input-textbox" id="input_6" name="fecha6" size="20" value="{{comentario.FECHA}}" type="text">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_7">
         <label class="form-label form-label-left form-label-auto" id="label_7" for="input_7"> Hora: </label>
         <div id="cid_7" class="form-input jf-required">
-          <input class=" form-textbox" data-type="input-textbox" id="input_7" name="hora" size="20" value="" type="text">
+          <input class=" form-textbox" data-type="input-textbox" id="input_7" name="hora" size="20" value="{{comentario.HORA}}" type="text">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_8">
         <label class="form-label form-label-left form-label-auto" id="label_8" for="input_8"> Asignatura: </label>
         <div id="cid_8" class="form-input jf-required">
-          <input class=" form-textbox" data-type="input-textbox" id="input_8" name="asignatura" size="20" value="" type="text">
+          <input class=" form-textbox" data-type="input-textbox" id="input_8" name="asignatura" size="20" value="{{comentario.ASIGNATURA}}" type="text">
         </div>
       </li>
       
